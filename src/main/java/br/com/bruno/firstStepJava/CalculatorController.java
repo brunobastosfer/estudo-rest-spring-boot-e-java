@@ -7,19 +7,30 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 
-public class GreetingController {
+public class CalculatorController {
 
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
-
-    @RequestMapping("greeting/sum/{numberOne}/{numberTwo}")
+    @RequestMapping("sum/{numberOne}/{numberTwo}")
     public Double sum(@PathVariable(value = "numberOne") String numberOne,
+                      @PathVariable(value = "numberTwo") String numberTwo) throws Exception {
+        if(!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+            throw new UnsupporteMathOperationException("Please set a valid value");
+        }
+
+        return convertToDouble(numberOne) + convertToDouble(numberTwo);
+    }
+
+    @RequestMapping("sub/{numberOne}/{numberTwo}")
+    public Double sub(@PathVariable(value = "numberOne") String numberOne,
                       @PathVariable(value = "numberTwo") String numberTwo) throws Exception {
         if(!isNumeric(numberOne) || !isNumeric(numberTwo)) {
             throw new UnsupporteMathOperationException("Please set a numeric value");
         }
 
-        return convertToDouble(numberOne) + convertToDouble(numberTwo);
+        if(convertToDouble(numberOne) - convertToDouble(numberTwo) < 0) {
+            throw new UnsupporteMathOperationException("Sorry, we don't work with a negative numbers");
+        }
+
+        return convertToDouble(numberOne) - convertToDouble(numberTwo);
     }
 
     private Double convertToDouble(String strNumber) {
