@@ -1,4 +1,4 @@
-package br.com.bruno.FirstStepJava;
+package br.com.bruno.firstStepJava;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package br.com.bruno.FirstStepJava;
+package br.com.bruno.firstStepJava;
 
 public class Greeting {
 
