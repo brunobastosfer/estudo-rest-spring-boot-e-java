@@ -1,8 +1,10 @@
-br\com\bruno\exceptions\handler\CustomizedResponseEntityExceptionHandler.class
-br\com\bruno\firstStepJava\Startup.class
+br\com\bruno\Startup.class
+br\com\bruno\data\vo\v1\PersonVO.class
+br\com\bruno\mapper\DozerMapper.class
 br\com\bruno\exceptions\ResourceNotFoundException.class
-br\com\bruno\repositories\PersonRepository.class
 br\com\bruno\exceptions\ExceptionResponse.class
-br\com\bruno\services\PersonService.class
-controllers\Controllers.class
 br\com\bruno\model\Person.class
+br\com\bruno\exceptions\handler\CustomizedResponseEntityExceptionHandler.class
+br\com\bruno\controllers\Controllers.class
+br\com\bruno\repositories\PersonRepository.class
+br\com\bruno\services\PersonService.class

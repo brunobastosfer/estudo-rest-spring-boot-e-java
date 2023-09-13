@@ -1,1 +1,3 @@
+br\com\bruno\firstStepJava\unittests\mapper\DozerConverterTest.class
 br\com\bruno\firstStepJava\FirstStepJavaApplicationTests.class
+br\com\bruno\firstStepJava\unittests\mapper\mocks\MockPerson.class
